@@ -5,7 +5,7 @@ const sinon = require( 'sinon' )
 describe('index.js', function () {
   describe('findMatching()', function () {
     it('returns all drivers that match the passed in name', function () {
-      const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
+      const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby'];
 
       expect(findMatching(drivers, 'Bobby')).to.eql(['Bobby', 'Bobby']);
       expect(findMatching(drivers, 'Sammy')).to.eql(['Sammy']);
@@ -33,7 +33,7 @@ describe('index.js', function () {
       drivers.push('Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'bobby');
     });
 
-    it('returns a driver if beginning provided letters match', function () {
+    it('returns a driver if beginning provided letters match', function () {const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
       expect(fuzzyMatch(drivers, 'Sa')).to.have.members(['Sammy', 'Sarah', 'Sally']);
     });
 
