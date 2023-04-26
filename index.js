@@ -129,6 +129,24 @@ findMatching(fruit, 'lemon');
   }
 
   matchName(obDrivers, 'Sally')
+
+  // matchName is not searching for hometown, just the name
+  matchName(obDrivers, 'Tampy Bay')
+
+  function matchHome(collection, string) {
+    const obHome = collection.filter(function(obj) {
+      if (string === obj.hometown) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    console.log(obHome);
+    return obHome;
+  }
+
+  matchHome(obDrivers, 'Tampa Bay')
+
 //findMatching(drivers, 'Bobby');
 //findMatching(drivers, 'Sally');
 
